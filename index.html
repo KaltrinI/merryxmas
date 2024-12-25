@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Themed Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: lightblue;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #b22222;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .content {
+            padding: 20px;
+            flex: 1; /* This ensures the content area takes up remaining space */
+        }
+
+        .tree {
+            font-size: 4rem;
+            margin: 20px 0;
+        }
+
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .accordion {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            border: none;
+        }
+
+        .accordion-item {
+            margin-bottom: 10px;
+        }
+
+        .accordion-item button {
+            background-color: #b22222;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1.1rem;
+            border-radius: 5px; /* Makes the button round */
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-item button:hover {
+            background-color: #d9534f;
+        }
+
+        .accordion-item-content {
+            padding: 15px;
+            background-color: white;
+            display: none;
+            
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #b22222;
+            padding: 10px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            bottom: 0; /* Stick the footer to the bottom */
+            z-index: 10; /* Ensure it's above other content */
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .tree {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header>
+        <h1>Merry Christmas!</h1>
+    </header>
+
+    <div class="content">
+        <div class="tree">🎄</div>
+        <p>Ви посакуваме среќни и пријатни божиќни празници, исполнети со топлина и радост. Нека новата година ви донесе многу успех, здравје и среќа!</p>
+
+        <!-- Accordion Component -->
+        <div class="accordion">
+            <!-- Top Menu: Item Prices -->
+            <div class="accordion-item">
+                <button class="accordion-button">Мену со Цени</button>
+                <div class="accordion-item-content">
+                    <ul>
+                        <li>Вино - 10€</li>
+                        <li>Лимон - 1€</li>
+                        <li>Портокал - 1.5€</li>
+                        <li>Шеќер - 0.5€</li>
+                        <li>Анасон - 1€</li>
+                        <li>Цимет - 1.5€</li>
+                        <li>Каранфилче - 1€</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Recipe: Instructions -->
+            <div class="accordion-item">
+                <button class="accordion-button">Рецепт</button>
+                <div class="accordion-item-content">
+                    <h2>Рецепт за 1 литро вино (4 пакети):</h2>
+                    <ul>
+                        <li>1 лимон</li>
+                        <li>1 портокал</li>
+                        <li>3 лажици шеќер</li>
+                        <li>1 лажичка анасон</li>
+                        <li>2 стапчиња цимет</li>
+                        <li>10 стапчиња каранфилче</li>
+                    </ul>
+                    <h3>Упатство:</h3>
+                    <p>Виното ставете го во тенџере во кое ќе го варите и додадете му ја чашата вода, каранфилчето, анасонот, циметот и шеќерот. Ставете ги на тивок оган да се варат. Додадете и еден исцеден портокал, па варете го до вриење и потоа тргнете го од огнот. Исечете неколку парченца од кората од портокалот и лимонот и додадете ги во виното. Оставете го да се олади малку и потоа сервирајте.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>With <span>🩵</span> from CC Blue</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 200,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ffffff"
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    },
+                    polygon: {
+                        nb_sides: 5
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: false
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "bottom",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: false,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: false,
+                        mode: "push"
+                    },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+
+        // Accordion functionality
+        const accordionButtons = document.querySelectorAll(".accordion-button");
+
+        accordionButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const content = button.nextElementSibling;
+                const isOpen = content.style.display === "block";
+                // Close all accordion items
+                document.querySelectorAll(".accordion-item-content").forEach(item => {
+                    item.style.display = "none";
+                });
+                // If clicked item was not open, open it
+                if (!isOpen) {
+                    content.style.display = "block";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
